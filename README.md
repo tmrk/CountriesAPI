@@ -24,10 +24,13 @@ Each country has a unique value for these keys. However, if you'd like to return
 
 ### Multiple value keys
 
+These act like categories and will return multiple values
+
 * `region`
 * `subRegion`
-* `LDC`
-* `LLDC`
+* `intermediateRegion`
+* `LDC` - Least Developed Countries, as defined by the UNSD
+* `LLDC` - Land Locked Developing Countries, as defined by UNSD
 
 ## Example
 
