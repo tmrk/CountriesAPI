@@ -13,11 +13,12 @@ namespace CountriesAPI
         public string? m49code { get; set; }
         public string? region { get; set; }
         public string? subRegion { get; set; }
+        public string? intermediateRegion { get; set; }
         public bool? LDC { get; set; }
         public bool? LLDC { get; set; }
 
         public Country(string? Name, string? NameFrench, string? NameSpanish, string? NameRussian, string? NameChinese, string? NameArabic,
-                       string? Alpha2, string? Alpha3, string? M49code, string? Region, string? SubRegion, bool? Ldc, bool? Lldc)
+                       string? Alpha2, string? Alpha3, string? M49code, string? Region, string? SubRegion, string? IntermediateRegion, bool? Ldc, bool? Lldc)
         {
             if (!String.IsNullOrEmpty(Name)) name = Name;
             if (!String.IsNullOrEmpty(NameFrench)) nameFrench = NameFrench;
@@ -30,6 +31,7 @@ namespace CountriesAPI
             if (!String.IsNullOrEmpty(M49code)) m49code = M49code;
             if (!String.IsNullOrEmpty(Region)) region = Region;
             if (!String.IsNullOrEmpty(SubRegion)) subRegion = SubRegion;
+            if (!String.IsNullOrEmpty(IntermediateRegion)) intermediateRegion = IntermediateRegion;
             if (Ldc.HasValue) LDC = Ldc;
             if (Lldc.HasValue) LLDC = Lldc;
         }

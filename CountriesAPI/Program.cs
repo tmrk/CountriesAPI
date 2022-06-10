@@ -37,7 +37,7 @@ namespace CountriesAPI
         public static string dataPath = Path.Combine(Environment.CurrentDirectory, @"countries.json");
         public static string dataPathOnline = "https://gist.githubusercontent.com/tmrk/3ba1cc679e9f655143593524a203b7e2/raw/3e67c8cf3fdcb685f1407002be158499d95966e6/countries.json";
 
-        static List<Country> Countries(bool loadFromLocal)
+        static List<Country> Countries(bool loadFromLocal = false)
         {
             string json = "";
             if (loadFromLocal && File.Exists(dataPath)) json = File.ReadAllText(dataPath);
@@ -45,7 +45,7 @@ namespace CountriesAPI
             return JsonSerializer.Deserialize<List<Country>>(json);
         }
 
-        public static List<Country> countries = Countries(true);
+        public static List<Country> countries = Countries();
     }
 }
 
